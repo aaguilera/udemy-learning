@@ -1,1 +1,3 @@
-My notes and exercices on the course "Mastering Hibernate and JPA with Spring Boot"
+# Mastering Hibernate and JPA with Spring Boot
+
+My notes and exercices of this course
