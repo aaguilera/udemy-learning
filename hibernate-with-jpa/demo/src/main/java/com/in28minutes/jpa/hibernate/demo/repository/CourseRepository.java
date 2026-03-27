@@ -6,8 +6,10 @@ import org.springframework.stereotype.Repository;
 import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
 import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 
 @Repository
+@Transactional
 public class CourseRepository {
 
 	@Autowired
@@ -19,5 +21,8 @@ public class CourseRepository {
 
 	// public Course save(Course course) -> insert or update
 
-	// public void deleteById(Long id)
+	public void deleteById(Long id) {
+		var course = findById(id);
+		em.remove(course);
+	}
 }
