@@ -24,9 +24,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		var course = courseRepository.findById(10001L);
-		logger.info("Course 10001 -> {}", course);
-		courseRepository.save(new Course("Microservices in 100 steps"));
+		courseRepository.playWithEntityManager();
 	}
 
 }

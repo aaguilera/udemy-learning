@@ -43,3 +43,9 @@ update course set name=? where id=?
 ```
 
 note that the first modification is not propagated to the DB!
+
+## EntityManager methods `flush()`, `clear()` and `detach()`
+
+- `flush()`: Synchronize changes held in the persistence context to the underlying database.
+- `detach(entity)`: Evict the given managed or removed entity from the persistence context, causing the entity to become immediately detached. Unflushed changes made to the entity, if any, including deletion of the entity, will never be synchronized to the database.
+- `clear()`: Clear the persistence context, causing all managed entities to become detached. Changes made to entities that have not already been flushed to the database will never be made persistent.
