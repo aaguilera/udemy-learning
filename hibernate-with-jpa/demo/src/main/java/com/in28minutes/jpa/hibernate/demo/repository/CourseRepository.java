@@ -38,19 +38,8 @@ public class CourseRepository {
 	public void playWithEntityManager() {
 		Course course = new Course("Web Services in 100 steps");
 		em.persist(course);
-		Course course2 = new Course("Angular Js in 100 steps");
-		em.persist(course2);
 		em.flush();
 
-		em.clear();
-
-		// after em.clear(), the following modifications won't be propagated to the
-		// database, even if we use flush():
-
-		course.setName("Web Services in 100 steps - Updated");
-		em.flush();
-
-		course2.setName("Angular Js in 100 steps - Updated");
-		em.flush();
+		course.setName("Web Services in 100 steps 2");
 	}
 }

@@ -3,8 +3,10 @@ package com.in28minutes.jpa.hibernate.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name = "query_get_all_courses", query = "Select c from Course c")
 public class Course {
 
 	@Id
